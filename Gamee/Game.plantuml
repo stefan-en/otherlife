@@ -1,0 +1,545 @@
+@startuml
+
+title __GAME's Class Diagram__\n
+
+  namespace creatures {
+    abstract class creatures.Creature {
+    }
+  }
+  
+
+  namespace creatures {
+    abstract class creatures.Enemy {
+    }
+  }
+  
+
+  namespace creatures {
+    class creatures.Enemy_b {
+    }
+  }
+  
+
+  namespace creatures {
+    class creatures.Enemy_f {
+    }
+  }
+  
+
+  namespace creatures {
+    class creatures.Player {
+    }
+  }
+  
+
+  namespace creatures {
+    namespace states {
+      class creatures.states.Attack {
+      }
+    }
+  }
+  
+
+  namespace creatures {
+    namespace states {
+      abstract class creatures.states.EnemyState {
+      }
+    }
+  }
+  
+
+  namespace creatures {
+    namespace states {
+      class creatures.states.Follow {
+      }
+    }
+  }
+  
+
+  namespace creatures {
+    namespace states {
+      class creatures.states.Waiting {
+      }
+    }
+  }
+  
+
+  namespace display {
+    class display.Display {
+    }
+  }
+  
+
+  namespace entities {
+    abstract class entities.Entity {
+    }
+  }
+  
+
+  namespace entities {
+    class entities.EntityManager {
+    }
+  }
+  
+
+  namespace gfx {
+    class gfx.Assets {
+    }
+  }
+  
+
+  namespace gfx {
+    class gfx.FontLoader {
+    }
+  }
+  
+
+  namespace gfx {
+    class gfx.GameCamera {
+    }
+  }
+  
+
+  namespace gfx {
+    class gfx.ImageLoader {
+    }
+  }
+  
+
+  namespace gfx {
+    class gfx.SpriteSheet {
+    }
+  }
+  
+
+  namespace gfx {
+    class gfx.Text {
+    }
+  }
+  
+
+  namespace states {
+    class states.GameOverState {
+    }
+  }
+  
+
+  namespace states {
+    class states.GameState {
+    }
+  }
+  
+
+  namespace states {
+    class states.MeniuState {
+    }
+  }
+  
+
+  namespace states {
+    class states.PauseState {
+    }
+  }
+  
+
+  namespace states {
+    class states.PlayState {
+    }
+  }
+  
+
+  namespace states {
+    abstract class states.State {
+    }
+  }
+  
+
+  namespace states {
+    class states.StateManager {
+    }
+  }
+  
+
+  namespace tilegame {
+    class tilegame.Animation {
+    }
+  }
+  
+
+  namespace tilegame {
+    class tilegame.Game {
+    }
+  }
+  
+
+  namespace tilegame {
+    class tilegame.Handler {
+    }
+  }
+  
+
+  namespace tilegame {
+    class tilegame.Main {
+    }
+  }
+  
+
+  namespace tilegame {
+    class tilegame.World {
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace command {
+      abstract class tilegame.command.Command {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace command {
+      class tilegame.command.easy_command {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace command {
+      class tilegame.command.exit_command {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace command {
+      class tilegame.command.hard_command {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace command {
+      class tilegame.command.sett_command {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace command {
+      class tilegame.command.start_command {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace input {
+      class tilegame.input.KeyManager {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace input {
+      class tilegame.input.MouseManager {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace inventory {
+      class tilegame.inventory.Inventory {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace items {
+      class tilegame.items.Item {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace items {
+      class tilegame.items.ItemManager {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace staticentity {
+      abstract class tilegame.staticentity.StaticEntity {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace staticentity {
+      class tilegame.staticentity.ciperca_haleala {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace staticentity {
+      class tilegame.staticentity.door {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace staticentity {
+      class tilegame.staticentity.superpower {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace tile {
+      class tilegame.tile.ConturTile {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace tile {
+      class tilegame.tile.Tile {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace tile {
+      class tilegame.tile.acidTile {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace tile {
+      class tilegame.tile.bgrTile {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace tile {
+      class tilegame.tile.box {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace tile {
+      class tilegame.tile.flame {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace tile {
+      class tilegame.tile.jigsaw {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace tile {
+      class tilegame.tile.tepi {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace tile {
+      class tilegame.tile.toxic {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace ui {
+      interface tilegame.ui.ClickLisener {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace ui {
+      class tilegame.ui.UIBkg {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace ui {
+      class tilegame.ui.UIImageButton {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace ui {
+      class tilegame.ui.UIManager {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace ui {
+      abstract class tilegame.ui.UIObject {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace ui {
+      abstract class tilegame.ui.UIText {
+      }
+    }
+  }
+  
+
+  namespace tilegame {
+    namespace utils {
+      class tilegame.utils.Utils {
+      }
+    }
+  }
+  
+
+  creatures.Creature -up-|> entities.Entity
+  creatures.Enemy -up-|> creatures.Creature
+  creatures.Enemy o-- tilegame.Handler : handler
+  creatures.Enemy o-- creatures.states.EnemyState : state
+  creatures.Enemy_b -up-|> creatures.Enemy
+  creatures.Enemy_b o-- tilegame.Animation : atk_b_d
+  creatures.Enemy_b o-- tilegame.Animation : atk_b_s
+  creatures.Enemy_b o-- tilegame.Animation : dead_b_d
+  creatures.Enemy_b o-- tilegame.Animation : dead_b_s
+  creatures.Enemy_b o-- tilegame.Animation : idl_b_d
+  creatures.Enemy_b o-- tilegame.Animation : idl_b_s
+  creatures.Enemy_b o-- tilegame.Animation : walk_b_d
+  creatures.Enemy_b o-- tilegame.Animation : walk_b_s
+  creatures.Enemy_f -up-|> creatures.Enemy_b
+  creatures.Enemy_f o-- tilegame.Animation : atk_f_d
+  creatures.Enemy_f o-- tilegame.Animation : atk_f_s
+  creatures.Enemy_f o-- tilegame.Animation : dead_f_d
+  creatures.Enemy_f o-- tilegame.Animation : dead_f_s
+  creatures.Enemy_f o-- tilegame.Animation : idl_f_d
+  creatures.Enemy_f o-- tilegame.Animation : idl_f_s
+  creatures.Enemy_f o-- tilegame.Animation : walk_f_d
+  creatures.Enemy_f o-- tilegame.Animation : walk_f_s
+  creatures.Player -up-|> creatures.Creature
+  creatures.Player o-- tilegame.Animation : animAtk_l
+  creatures.Player o-- tilegame.Animation : animAtk_r
+  creatures.Player o-- tilegame.Animation : animSt_l
+  creatures.Player o-- tilegame.Animation : animSt_r
+  creatures.Player o-- tilegame.Animation : animWalk_l
+  creatures.Player o-- tilegame.Animation : animWalk_r
+  creatures.Player o-- tilegame.Animation : anim_jump_left
+  creatures.Player o-- tilegame.Animation : anim_jump_right
+  creatures.Player o-- tilegame.inventory.Inventory : inventory
+  creatures.states.Attack -up-|> creatures.states.EnemyState
+  creatures.states.EnemyState o-- creatures.Enemy : thisEnemy
+  creatures.states.Follow -up-|> creatures.states.EnemyState
+  creatures.states.Waiting -up-|> creatures.states.EnemyState
+  entities.Entity o-- tilegame.Handler : handler
+  entities.EntityManager o-- tilegame.Handler : handler
+  entities.EntityManager o-- creatures.Player : player
+  gfx.GameCamera o-- tilegame.Handler : handler
+  states.GameOverState -up-|> states.State
+  states.GameState -up-|> states.State
+  states.GameState o-- tilegame.ui.UIManager : uiManager
+  states.GameState o-- tilegame.World : world
+  states.MeniuState -up-|> states.State
+  states.MeniuState o-- tilegame.ui.UIManager : uiManager
+  states.PauseState -up-|> states.State
+  states.PlayState -up-|> states.State
+  states.State o-- tilegame.Handler : handler
+  states.StateManager o-- tilegame.Handler : handler
+  tilegame.Game .up.|> java.lang.Runnable
+  tilegame.Game o-- states.State : gameState
+  tilegame.Game o-- states.State : meniuState
+  tilegame.Game o-- display.Display : display
+  tilegame.Game o-- gfx.GameCamera : gameCamera
+  tilegame.Game o-- tilegame.Handler : handler
+  tilegame.Game o-- tilegame.input.KeyManager : keyManager
+  tilegame.Game o-- tilegame.input.MouseManager : mouseManager
+  tilegame.Handler o-- tilegame.Game : game
+  tilegame.Handler o-- tilegame.World : world
+  tilegame.World o-- entities.EntityManager : entityManager
+  tilegame.World o-- tilegame.Handler : handler
+  tilegame.World o-- tilegame.items.ItemManager : itemManager
+  tilegame.command.Command o-- tilegame.Handler : handler
+  tilegame.command.easy_command -up-|> tilegame.command.Command
+  tilegame.command.exit_command -up-|> tilegame.command.Command
+  tilegame.command.hard_command -up-|> tilegame.command.Command
+  tilegame.command.sett_command -up-|> tilegame.command.Command
+  tilegame.command.start_command -up-|> tilegame.command.Command
+  tilegame.input.KeyManager .up.|> java.awt.event.KeyListener
+  tilegame.input.MouseManager .up.|> java.awt.event.MouseListener
+  tilegame.input.MouseManager .up.|> java.awt.event.MouseMotionListener
+  tilegame.input.MouseManager o-- tilegame.ui.UIManager : uiManager
+  tilegame.inventory.Inventory o-- tilegame.Handler : handler
+  tilegame.items.Item o-- tilegame.Handler : handler
+  tilegame.items.ItemManager o-- tilegame.Handler : handler
+  tilegame.staticentity.StaticEntity -up-|> entities.Entity
+  tilegame.staticentity.ciperca_haleala -up-|> tilegame.staticentity.StaticEntity
+  tilegame.staticentity.door -up-|> tilegame.staticentity.StaticEntity
+  tilegame.staticentity.superpower -up-|> tilegame.staticentity.StaticEntity
+  tilegame.tile.ConturTile -up-|> tilegame.tile.Tile
+  tilegame.tile.acidTile -up-|> tilegame.tile.Tile
+  tilegame.tile.bgrTile -up-|> tilegame.tile.Tile
+  tilegame.tile.box -up-|> tilegame.tile.Tile
+  tilegame.tile.flame -up-|> tilegame.tile.Tile
+  tilegame.tile.jigsaw -up-|> tilegame.tile.Tile
+  tilegame.tile.tepi -up-|> tilegame.tile.Tile
+  tilegame.tile.toxic -up-|> tilegame.tile.Tile
+  tilegame.ui.UIBkg -up-|> tilegame.ui.UIObject
+  tilegame.ui.UIImageButton -up-|> tilegame.ui.UIObject
+  tilegame.ui.UIImageButton o-- tilegame.ui.ClickLisener : click
+  tilegame.ui.UIImageButton o-- tilegame.ui.ClickLisener : clickLisener
+  tilegame.ui.UIImageButton o-- tilegame.command.Command : comanda
+  tilegame.ui.UIManager o-- tilegame.Handler : handler
+  tilegame.ui.UIText -up-|> tilegame.ui.UIObject
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

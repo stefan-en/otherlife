@@ -1,0 +1,180 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "tilegame.tile.Tile#render(Graphics,int,int)",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": ""
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false // root node is included
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "tilegame.tile.Tile"
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_2105436256 { 
+   	label=tilegame
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_236353444 { 
+   	label=World
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   World2105436256XXXrender165351083[
+	label="+ render()"
+	style=filled
+	fillcolor=white
+	tooltip="World
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_3560110 { 
+   	label=tile
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1185215168 { 
+   	label=Tile
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Tile1515538372XXXrender1317632459[
+	label="+ render()"
+	style=filled
+	fillcolor=white
+	tooltip="Tile
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_892482046 { 
+   	label=states
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1110538875 { 
+   	label=State
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   State892482046XXXrender165351083[
+	label="+ render()"
+	style=filled
+	fillcolor=white
+	tooltip="State
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_936728243 { 
+   	label=GameState
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   GameState892482046XXXrender165351083[
+	label="+ render()"
+	style=filled
+	fillcolor=white
+	tooltip="GameState
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+GameState892482046XXXrender165351083 -> World2105436256XXXrender165351083;
+State892482046XXXrender165351083 -> GameState892482046XXXrender165351083;
+World2105436256XXXrender165351083 -> Tile1515538372XXXrender1317632459;
+    
+}
+@enduml

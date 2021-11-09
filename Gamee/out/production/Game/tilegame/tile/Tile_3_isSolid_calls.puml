@@ -1,0 +1,196 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "tilegame.tile.Tile#isSolid()",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": ""
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false // root node is included
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "tilegame.tile.Tile"
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_3560110 { 
+   	label=tile
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1185215168 { 
+   	label=Tile
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Tile1515538372XXXisSolid0[
+	label="+ isSolid()"
+	style=filled
+	fillcolor=white
+	tooltip="Tile
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_598862868 { 
+   	label=creatures
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1176912411 { 
+   	label=Player
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Player598862868XXXtick0[
+	label="+ tick()"
+	style=filled
+	fillcolor=white
+	tooltip="Player
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1377590521 { 
+   	label=Creature
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Creature598862868XXXmove0[
+	label="+ move()"
+	style=filled
+	fillcolor=white
+	tooltip="Creature
+
+null"
+	fontcolor=darkgreen
+];
+
+Creature598862868XXXmoveX0[
+	label="+ moveX()"
+	style=filled
+	fillcolor=white
+	tooltip="Creature
+
+null"
+	fontcolor=darkgreen
+];
+
+Creature598862868XXXmoveY0[
+	label="+ moveY()"
+	style=filled
+	fillcolor=white
+	tooltip="Creature
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1911793394 { 
+   	label=Enemy
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Enemy598862868XXXtick0[
+	label="+ tick()"
+	style=filled
+	fillcolor=white
+	tooltip="Enemy
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+Creature598862868XXXmove0 -> Creature598862868XXXmoveX0;
+Creature598862868XXXmove0 -> Creature598862868XXXmoveY0;
+Creature598862868XXXmoveX0 -> Tile1515538372XXXisSolid0;
+Creature598862868XXXmoveY0 -> Tile1515538372XXXisSolid0;
+Enemy598862868XXXtick0 -> Creature598862868XXXmove0;
+Player598862868XXXtick0 -> Creature598862868XXXmove0;
+    
+}
+@enduml
